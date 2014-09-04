@@ -4,6 +4,7 @@ import de.javasoft.plaf.synthetica.SyntheticaAluOxideLookAndFeel;
 import me.poptart.ui.UIManager;
 import me.poptart.ui.presenter.MainPresenter;
 import me.poptart.ui.view.buttons.ControlButton;
+import me.poptart.utils.Internet;
 
 import javax.swing.*;
 import java.awt.*;
@@ -26,14 +27,8 @@ public class Application {
         MainPresenter presenter = UIManager.get(MainPresenter.class);
         presenter.show();
 
-        for(Component comp : presenter.view().controlPanel().getComponents()) {
-            if(comp instanceof ControlButton) {
-                ((ControlButton) comp).addActionListener(e -> System.out.println(e.getSource()));
-            }
-        }
+        presenter.view().frame().setIconImage(Internet.image("https://raw.githubusercontent.com/Codeusa/poptart-app/master/poptart-app/src/resources/poptart.png"));
 
-        presenter.view().controlPanel().play().addActionListener(e ->
-                JOptionPane.showConfirmDialog(presenter.view().frame(), "YAY", "You clicked the play button!", JOptionPane.DEFAULT_OPTION));
     }
 
 }
