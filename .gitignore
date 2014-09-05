@@ -3,6 +3,6 @@
 *.xml
 *.xml
 .idea/uiDesigner.xml
-out/*.*
+out/*
 *.class
 *.db
