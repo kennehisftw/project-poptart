@@ -1,6 +1,8 @@
 package me.poptart.ui.view.panels;
 
+import jdk.nashorn.internal.runtime.regexp.joni.Config;
 import me.poptart.ui.view.buttons.ControlButton;
+import me.poptart.utils.Images;
 import me.poptart.utils.Internet;
 
 import javax.swing.*;
@@ -21,7 +23,7 @@ public class ControlPanel extends JPanel {
         setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
         setBackground(background);
 
-        play = new ControlButton(Internet.image("http://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/32/Actions-media-playback-start-icon.png"));
+        play = new ControlButton(Images.get("play"));
         previous = new ControlButton(Internet.image("http://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/32/Actions-media-seek-backward-icon.png"));
         next = new ControlButton(Internet.image("http://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/32/Actions-media-seek-forward-icon.png"));
         mute = new ControlButton(Internet.image("http://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/32/Status-audio-volume-muted-icon.png"));
@@ -56,6 +58,26 @@ public class ControlPanel extends JPanel {
         add(shuffle); add(Box.createRigidArea(new Dimension(5, 0)));
         add(repeat); add(Box.createRigidArea(new Dimension(5, 0)));
 
+    }
+
+    public JLabel current() {
+        return durationPanel.current();
+    }
+
+    public JLabel total() {
+        return durationPanel.total();
+    }
+
+    public JSlider seek() {
+        return durationPanel.seek();
+    }
+
+    public ControlButton mute() {
+        return mute;
+    }
+
+    public JSlider volume() {
+        return volume;
     }
 
     public ControlButton play() {

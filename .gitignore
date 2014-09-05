@@ -1,0 +1,8 @@
+*.xml
+*.name
+*.xml
+*.xml
+.idea/uiDesigner.xml
+out/*.*
+*.class
+*.db

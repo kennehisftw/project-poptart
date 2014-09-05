@@ -6,6 +6,7 @@ import me.poptart.ui.view.menus.PoptartMenuBar;
 import me.poptart.ui.view.panels.ControlPanel;
 import me.poptart.ui.view.panels.PlaylistPanel;
 import me.poptart.ui.view.panels.TablePanel;
+import me.poptart.utils.Images;
 
 import javax.swing.*;
 import java.awt.*;
@@ -32,6 +33,7 @@ public class MainView extends View<MainPresenter, MainModel> {
         frame.getContentPane().setLayout(new BorderLayout());
 
         frame.getContentPane().setBackground(Color.BLACK);
+        frame.setIconImage(Images.get("poptart"));
 
         controlPanel = new ControlPanel();
         frame.getContentPane().add(controlPanel, BorderLayout.SOUTH);
