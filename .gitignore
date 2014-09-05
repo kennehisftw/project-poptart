@@ -6,3 +6,4 @@
 out/*
 *.class
 *.db
+*.MF

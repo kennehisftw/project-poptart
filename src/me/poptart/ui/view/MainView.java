@@ -48,6 +48,14 @@ public class MainView extends View<MainPresenter, MainModel> {
         frame.setJMenuBar(bar);
     }
 
+    public PlaylistPanel playlistPanel() {
+        return playlistPanel;
+    }
+
+    public TablePanel tablePanel() {
+        return tablePanel;
+    }
+
     public ControlPanel controlPanel() {
         return controlPanel;
     }

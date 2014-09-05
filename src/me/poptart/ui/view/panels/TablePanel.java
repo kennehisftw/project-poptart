@@ -40,4 +40,8 @@ public class TablePanel extends JPanel {
         add(scrollPane, BorderLayout.CENTER);
     }
 
+    public JTable table() {
+        return table;
+    }
+
 }

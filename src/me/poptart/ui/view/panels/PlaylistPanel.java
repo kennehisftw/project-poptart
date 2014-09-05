@@ -37,8 +37,6 @@ public class PlaylistPanel extends JPanel {
         playlists.setBorder(new EmptyBorder(5, 5, 5, 5));
 
         playlistModel.addElement("The best playlist");
-        playlistModel.addElement("ALL MUSIC ALL THE TIME");
-        playlistModel.addElement("Top 40 pop tracks");
 
         scrollpane = new JScrollPane(playlists);
         scrollpane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
